@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  height: 100vh;
+}
+
+body {
+  height: auto;
+  min-height: 100%;
+  background-color: #011526;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 120px;
+  text-align: center;
+}
+
+.timer_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 120px 0;
+}
+
+.timer_title {
+  font-size: 48px;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.item_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 48px;
+  background-color: #034873;
+  outline: 2px solid #0578a6;
+  transition: background-color 500ms linear;
+  transition: outline-offset 250ms linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0578a6;
+    outline-offset: 4px;
+  }
+
+  &.selected {
+    background-color: #6fc6e3;
+    color: #011526;
+    outline-offset: 4px;
+  }
+
+  &.disabled {
+    background-color: #020d19;
+    color: #3b4756;
+    outline-color: #3b4756;
+  }
+}
+
+.keyboard_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 48px;
+  text-transform: capitalize;
+  background-color: #0bb3d9;
+  outline: 2px solid #0578a6;
+  transition: background-color 200ms linear;
+  color: #020d19;
+
+  &.disabled {
+    background-color: #020d19;
+    color: #3b4756;
+    outline-color: #3b4756;
+  }
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 12px 64px;
+  font-size: 24px;
+  border-radius: 12px;
+  background-color: #07da8d;
+  font-weight: bold;
+  color: #011526;
+  transition: background-color 500ms linear;
+  transition: outline-offset 250ms linear;
+  outline: 2px solid #17bf7c;
+  margin-top: 24px;
+  &:hover {
+    background-color: #70e5a9;
+    outline-offset: 4px;
+  }
+  &.disabled {
+    background-color: #1e5c3e;
+    outline-color: #162f22;
+    color: #101b15;
+  }
+}
+
+.keyboard_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.keys_container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.game_end {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hidden {
+  display: none;
+}
